@@ -78,7 +78,7 @@ def main():
 
     print(f"Total chunks: {len(documents)}")
     if not documents:
-      1  print("No text found. Check that your PDFs are in the data folder and are not scanned images.")
+        print("No text found. Check that your PDFs are in the data folder and are not scanned images.")
         return
 
     # STEP 4: Turn chunks into numbers (embeddings)
