@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("all-MiniLM-L6-v2")
 collection = chromadb.PersistentClient(path="chroma_db").get_collection("docs")
 
-question = "What is the deadline for module registration changes?"   # change to a question about YOUR pdf
+question = "What is the deadline for module registration changes?"  
 result = collection.query(
     query_embeddings=model.encode([question]).tolist(),
     n_results=3,
